@@ -20,15 +20,7 @@ public class Player {
         return dices;
     }
 
-    public void rollDices() {
-        for (Dice dice : this.dices) {
-            if (!dice.isLocked()) {
-                dice.roll();
-            }
-        }
-    }
-
-    public void lockDices(String toLock) {
+    public void rollDices(String toLock) {
         String[] toLockInput = toLock.split(",");
         int[] nums = new int[toLockInput.length];
         for (int i = 0; i < toLockInput.length; i++) {
@@ -36,6 +28,11 @@ public class Player {
         }
         for (int n : nums) {
             dices[n - 1].lock();
+        }
+        for (Dice dice : this.dices) {
+            if (!dice.isLocked()) {
+                dice.roll();
+            }
         }
     }
 
