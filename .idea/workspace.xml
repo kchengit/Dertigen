@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbe99c65-ee89-4c46-a9b0-674793960c24" name="Changes" comment="Main class">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+    <list default="true" id="fbe99c65-ee89-4c46-a9b0-674793960c24" name="Changes" comment="Added getSum()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662405420804</updated>
-      <workItem from="1662405422708" duration="5610000" />
+      <workItem from="1662405422708" duration="8699000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1662409862630</created>
@@ -93,7 +91,70 @@
       <option name="project" value="LOCAL" />
       <updated>1662409899010</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changed getDices to return Dice[] instead of int[]">
+      <created>1662411212535</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662411212535</updated>
+    </task>
+    <task id="LOCAL-00006" summary="misc">
+      <created>1662411220989</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662411220989</updated>
+    </task>
+    <task id="LOCAL-00007" summary="first draft Game class">
+      <created>1662411237856</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1662411237856</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixed input matching the dices">
+      <created>1662412736831</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1662412736831</updated>
+    </task>
+    <task id="LOCAL-00009" summary="changed roll and lock functions into one">
+      <created>1662412845256</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1662412845256</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added startGame">
+      <created>1662412860891</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1662412860891</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added startGame">
+      <created>1662412916839</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1662412916839</updated>
+    </task>
+    <task id="LOCAL-00012" summary="changed to playGame io startGame">
+      <created>1662413520483</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1662413520483</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added getSum()">
+      <created>1662413643802</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1662413643802</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +176,14 @@
     <MESSAGE value="Dice class" />
     <MESSAGE value="Player class" />
     <MESSAGE value="Main class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main class" />
+    <MESSAGE value="Changed getDices to return Dice[] instead of int[]" />
+    <MESSAGE value="misc" />
+    <MESSAGE value="first draft Game class" />
+    <MESSAGE value="Fixed input matching the dices" />
+    <MESSAGE value="changed roll and lock functions into one" />
+    <MESSAGE value="added startGame" />
+    <MESSAGE value="changed to playGame io startGame" />
+    <MESSAGE value="Added getSum()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getSum()" />
   </component>
 </project>
