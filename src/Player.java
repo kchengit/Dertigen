@@ -35,7 +35,7 @@ public class Player {
             nums[i] = Integer.parseInt(toLockInput[i]);
         }
         for (int n : nums) {
-            dices[n].lock();
+            dices[n - 1].lock();
         }
     }
 
