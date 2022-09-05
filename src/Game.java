@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -38,9 +39,21 @@ public class Game {
         return true;
     }
 
-    public void startGame() {
-        System.out.printf("Hello %s! Here is your roll:\n%s", players.get(currentPlayer).getName(),
-                printNums(players.get(currentPlayer)));
+    public void playGame() {
+        Iterator<Player> it = players.iterator();
+        while (it.hasNext()) {
+            while (!endOfTurn()) {
+                System.out.printf("Hello %s! Here is your roll:\n", currentPlayer.getName());
+                System.out.println(printNums(currentPlayer));
+                String keptDices = sc.nextLine();
+                currentPlayer.rollDices(keptDices);
+            }
+            System.out.println("Your total was: " + currentPlayer.getSum());
+            currentPlayer = it.next();
+            if (!it.hasNext()) {
+                it = players.iterator();
+            }
+        }
     }
 
 }
