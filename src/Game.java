@@ -25,6 +25,7 @@ public class Game {
             }
             numString.append(" ");
         }
+        numString.append("\n- - - - - -\n1 2 3 4 5 6 <- dice numbers \nWhich dices would you like to keep?");
         return numString.toString();
     }
 
