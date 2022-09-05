@@ -6,19 +6,19 @@ public class Game {
 
     Scanner sc = new Scanner(System.in);
     private final List<Player> players;
-    private int currentPlayer;
+    private Player currentPlayer;
 
     public Game(String[] playerNames) {
         this.players = new ArrayList<>(playerNames.length);
         for (String name : playerNames) {
             players.add(new Player(name));
         }
-        this.currentPlayer = 0;
+        this.currentPlayer = players.get(0);
     }
 
     public String printNums(Player player) {
         StringBuilder numString = new StringBuilder();
-        for (Dice d : players.get(currentPlayer).getDices()) {
+        for (Dice d : currentPlayer.getDices()) {
             numString.append(d.getValue());
             if (d.isLocked()) {
                 numString.append("*");
@@ -29,12 +29,12 @@ public class Game {
     }
 
     public boolean endOfTurn() {
-        for (Dice d : players.get(currentPlayer).getDices()) {
-            if (d.isLocked()) {
-                return true;
+        for (Dice d : currentPlayer.getDices()) {
+            if (!d.isLocked()) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     public void startGame() {
