@@ -16,12 +16,8 @@ public class Player {
         return this.name;
     }
 
-    public int[] getDices() {
-        int[] diceNums = new int[this.dices.length];
-        for (int i = 0; i < this.dices.length; i++) {
-            diceNums[i] = dices[i].getValue();
-        }
-        return diceNums;
+    public Dice[] getDices() {
+        return dices;
     }
 
     public void rollDices() {
