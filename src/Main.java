@@ -13,7 +13,7 @@ public class Main {
             playerNames[i] = name;
         }
         Game game = new Game(playerNames);
-        game.startGame();
+        game.playGame();
     }
 
 }
