@@ -40,18 +40,16 @@ public class Game {
     }
 
     public void playGame() {
-        Iterator<Player> it = players.iterator();
-        while (it.hasNext()) {
-            while (!endOfTurn()) {
-                System.out.printf("Hello %s! Here is your roll:\n", currentPlayer.getName());
-                System.out.println(printNums(currentPlayer));
-                currentPlayer.rollDices(sc.nextLine());
-            }
-            System.out.println("Your total was: " + currentPlayer.getSum());
-            currentPlayer.resetDices();
-            currentPlayer = it.next();
-            if (!it.hasNext()) {
-                it = players.iterator();
+        while (true) {
+            for (Player p : players) {
+                currentPlayer = p;
+                while (!endOfTurn()) {
+                    System.out.printf("Hello %s! Here is your roll:\n", currentPlayer.getName());
+                    System.out.println(printNums(currentPlayer));
+                    currentPlayer.rollDices(sc.nextLine());
+                }
+                System.out.println("Your total was: " + currentPlayer.getSum());
+                currentPlayer.resetDices();
             }
         }
     }
