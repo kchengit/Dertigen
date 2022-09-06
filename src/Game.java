@@ -16,7 +16,7 @@ public class Game {
         this.currentPlayer = players.get(0);
     }
 
-    public String printNums(Player player) {
+    public String printNums() {
         StringBuilder numString = new StringBuilder();
         for (Dice d : currentPlayer.getDices()) {
             numString.append(d.getValue());
@@ -44,7 +44,7 @@ public class Game {
                 currentPlayer = p;
                 while (!endOfTurn()) {
                     System.out.printf("Hello %s! Here is your roll:\n", currentPlayer.getName());
-                    System.out.println(printNums(currentPlayer));
+                    System.out.println(printNums());
                     currentPlayer.rollDices(sc.nextLine());
                 }
                 System.out.println("Your total was: " + currentPlayer.getSum());
