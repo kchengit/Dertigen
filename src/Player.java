@@ -36,6 +36,13 @@ public class Player {
         }
     }
 
+    public void resetDices() {
+        for (Dice d : dices) {
+            d.unlock();
+            d.roll();
+        }
+    }
+
     public int getSum() {
         int sum = 0;
         for (Dice d : dices) {
