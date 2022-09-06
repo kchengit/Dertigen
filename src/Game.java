@@ -69,6 +69,9 @@ public class Game {
             System.out.printf("You handout %d sips to %s!\n", sips, nextPlayer.getName());
             nextPlayer.allocateSips(sips);
         }
+        for (Player p : players) {
+            System.out.printf("%s has %d sips\n", p.getName(), p.getSips());
+        }
     }
 
 }
