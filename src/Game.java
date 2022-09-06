@@ -48,6 +48,7 @@ public class Game {
                 currentPlayer.rollDices(sc.nextLine());
             }
             System.out.println("Your total was: " + currentPlayer.getSum());
+            currentPlayer.resetDices();
             currentPlayer = it.next();
             if (!it.hasNext()) {
                 it = players.iterator();
