@@ -45,8 +45,7 @@ public class Game {
             while (!endOfTurn()) {
                 System.out.printf("Hello %s! Here is your roll:\n", currentPlayer.getName());
                 System.out.println(printNums(currentPlayer));
-                String keptDices = sc.nextLine();
-                currentPlayer.rollDices(keptDices);
+                currentPlayer.rollDices(sc.nextLine());
             }
             System.out.println("Your total was: " + currentPlayer.getSum());
             currentPlayer = it.next();
