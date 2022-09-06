@@ -19,6 +19,10 @@ public class Dice {
         isLocked = true;
     }
 
+    public void unlock() {
+        isLocked = false;
+    }
+
     public int getValue() {
         return value;
     }
