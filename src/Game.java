@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -49,8 +48,26 @@ public class Game {
                     currentPlayer.rollDices(sc.nextLine());
                 }
                 System.out.println("Your total was: " + currentPlayer.getSum());
+                handoutSips();
                 currentPlayer.resetDices();
             }
+        }
+    }
+
+    public void handoutSips() {
+        Player nextPlayer = players.get((players.indexOf(currentPlayer) + 1) % players.size());
+        int sum = currentPlayer.getSum();
+        if (sum <= 10) {
+            System.out.printf("Congratulations! %s gets 20 sips!\n", nextPlayer.getName());
+            nextPlayer.allocateSips(20);
+        } else if (sum <= 30) {
+            int sips = 30 - sum;
+            System.out.printf("Unfortunate, you get %d sips!\n", sips);
+            currentPlayer.allocateSips(sips);
+        } else {
+            int sips = sum - 30;
+            System.out.printf("You handout %d sips to %s!\n", sips, nextPlayer.getName());
+            nextPlayer.allocateSips(sips);
         }
     }
 
