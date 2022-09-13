@@ -74,4 +74,10 @@ public class Game {
         }
     }
 
+    public void secondThrow() {
+        System.out.printf("Congratulations! You can throw again for %d!", currentPlayer.getSum() - 30);
+        currentPlayer.resetDices();
+
+    }
+
 }
